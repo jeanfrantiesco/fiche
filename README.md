@@ -9,8 +9,16 @@ Base para criação
 
 **docker cli**
 
-` docker run -d --name=escolha -p 9999:9999 -p 8000:80 -v </path/to/nginx/html>:/usr/share/nginx/html -v </path/to/nginx/conf.d>:/etc/nginx/conf.d jeanfrantiesco/fiche `
-  
+``` 
+docker run -d \
+--name=escolha \
+-p 9999:9999 \
+-p 8000:80 \
+-v /path/to/nginx/html:/usr/share/nginx/html \
+-v /path/to/nginx/conf.d:/etc/nginx/conf.d \
+jeanfrantiesco/fiche
+```
+
 | Parametros| Função |
 | --- | --- |
 | --name | Define um nome para o Container |

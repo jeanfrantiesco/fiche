@@ -27,7 +27,7 @@ jeanfrantiesco/fiche
 | --v /usr/share/nginx/html | Pasta web do nginx |
 | --v /etc/nginx/conf.d | Pasta de configuração do arquivo **default.conf do nginx** |
 
-###### OBS: Recomendo mapear a pasta do arquivo default.conf e editar o server_name e porta. \ 
+###### OBS: Recomendo mapear a pasta do arquivo default.conf e editar o server_name e porta.
 ###### Com isso automaticamente o fiche vai subir com os valores definidos no arquivo, caso contrario vai iniciar como localhost na porta 80.
 
 ## nginx

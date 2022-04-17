@@ -5,7 +5,38 @@ Base para criação
 1. [Container nginx](https://hub.docker.com/_/nginx)
 2. [Fiche](https://github.com/solusipse/fiche)
 
+# ATUALIZAÇÃO
+* Adicionado arquivo de template do nginx, com isso é possivel passar variáreis de ambiante.
+
+Sendo:
+| Variável| Função |
+| --- | --- |
+| ${NGINX_PORT} | Define a porta no arquivo do nginx |
+| ${NGINX_HOST}| Define o host no arquivo do nginx |
+
 ## Utilização
+
+**Docker Compose**
+
+``` 
+version: '3'
+volumes:
+  nginx-data:
+  
+services:
+  app:
+    container_name: escolha
+    image: 'jeanfrantiesco/fiche'
+    restart: unless-stopped
+    ports:
+      - 8000:80
+      - 9999:9999
+    environment:
+      - NGINX_PORT=80
+      - NGINX_HOST=exemple.com
+    volumes:
+      - nginx-data:/usr/share/nginx/html
+```
 
 **docker cli**
 
